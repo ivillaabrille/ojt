@@ -75,9 +75,16 @@ while CONVERSING:
 					print('Invalid Email!')
 
 			elif 'web-based' in userInput2.lower():
-				random_response = 'Alright. Request has been placed for a Web-based App.'
+				random_response = 'Alright. Request has been placed for a Web-based App. Please provide us with your email to confirm a few things.'
 				memory.append((userInput.lower(), random_response))
 				print(random_response)
+				userInput3 = input(">>>Me: ")
+				if '@' in userInput3:
+					random_response = 'We received the email "{}". Kindly wait awhile for details regarding your request.'.format(userInput3)
+					memory.append((userInput3, random_response))
+					print(random_response)
+				else:
+					print('Invalid Email!')
 
 			break
 
@@ -86,12 +93,36 @@ while CONVERSING:
 			random_response = 'What should the design look like?'
 			memory.append((userInput.lower(), random_response))
 			print(random_response)
+			userInput2= input(">>>Me: ")
+			random_response = 'Alright. Request has been placed for a Design. Please provide us with your email to confirm a few things.'
+			memory.append((userInput2.lower(), random_response))
+			print(random_response)
+			userInput3 = input(">>>Me: ")
+			if '@' in userInput3:
+				random_response = 'We received the email "{}". Kindly wait awhile for details regarding your request.'.format(userInput3)
+				memory.append((userInput3, random_response))
+				print(random_response)
+			else:
+				print('Invalid Email!')
+
 			break
 
 		elif request in userInput.lower() and request is 'logo':
 			random_response = 'What should the logo look like?'
 			memory.append((userInput.lower(), random_response))
 			print(random_response)
+			userInput2= input(">>>Me: ")
+			random_response = 'Alright. Request has been placed for a Logo. Please provide us with your email to confirm a few things.'
+			memory.append((userInput2.lower(), random_response))
+			print(random_response)
+			userInput3 = input(">>>Me: ")
+			if '@' in userInput3:
+				random_response = 'We received the email "{}". Kindly wait awhile for details regarding your request.'.format(userInput3)
+				memory.append((userInput3, random_response))
+				print(random_response)
+			else:
+				print('Invalid Email!')
+
 			break
 
 
